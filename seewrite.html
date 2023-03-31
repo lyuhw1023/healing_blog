@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .mainmenu {
+            position: relative;
+            display: block;
+            list-style: none;
+            float: left;
+
+        }
+
+        .mainmenu-content {
+            display: none;
+            position: absolute;
+            background: white;
+            z-index: 1;
+        }
+
+        .mainmenu-content a {
+            color: black;
+            padding: 25px 20px;
+            text-decoration: none;
+            display: block;
+            width: 130px;
+            text-align: left;
+        }
+
+        .mainmenu-content a:hover {
+            color: rgb(156, 155, 155);
+        }
+
+
+        .mainmenu:hover .mainmenu-content {
+            display: block;
+        }
+
+        #textup1 {
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            width: 30px;
+        }
+
+        #textup2 {
+            top: 10px;
+            left: 740px;
+            width: 350px;
+        }
+
+        a {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+
+        #name:hover {
+            text-shadow: 5px 5px 5px darkslategray;
+        }
+
+        #list {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 50px;
+            height: 30px;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <script>
+        //이미지 로딩해둘 이미지 이름 배열
+        var files = ["image/1.jpg", "image/2.jpg", "image/3.jpg", "image/4.jpg",
+            "image/5.jpg", "image/6.jpg", "image/7.jpg", "image/8.jpg", "image/9.jpg",
+            "image/10.jpg", "image/11.jpg", "image/12.jpg", "image/13.jpg"];
+        var imgs = new Array();
+        for (var i = 0; i < files.length; i++) {
+            imgs[i] = new Image();
+            imgs[i].src = files[i];
+        }
+        //다음 이미지 출력
+        var next = 1;
+        function change(img) {
+            img.src = imgs[next].src;
+            next++;
+            next %= imgs.length;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="mainmenu">
+        <a href="#"><img src="image/menu.png" id="textup1"></a>
+        <div class="mainmenu-content">
+            <a href="#">ㅤ</a>
+            <a href="home.html">홈</a>
+            <a href="see.html">글 보기</a>
+            <a href="codingstory.html">코딩이야기</a>
+            <a href="calendar.html">캘린더</a>
+            <a href="visitlist.html">방명록</a>
+        </div>
+    </div>
+
+    <img src="image/logo_see.png" id="textup2">
+    <button type="button" id="list" onclick="location.href='see.html'">목록</button>
+    <table>
+        <tr>
+            <td>
+                <br><br><br><br>제목 :
+            </td>
+            <td><br><br><br><br><input type="text" placeholder="제목" style="width:610px"><br></td>
+        </tr>
+        <tr>
+            <td>
+                <br>내용 :
+            </td>
+            <td><br><br><br><textarea cols="90" rows="35" placeholder="나만의 힐링 페이지를 만들어봐요!"></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><br><br><input type="button" value="등록하기"></td>
+        </tr>
+    </table>
+
+
+
+</body>
+
+</html>

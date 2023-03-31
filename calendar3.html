@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .mainmenu {
+            position: relative;
+            display: block;
+            list-style: none;
+            float: left;
+
+        }
+
+        .mainmenu-content {
+            display: none;
+            position: absolute;
+            background: white;
+            z-index: 1;
+        }
+
+        .mainmenu-content a {
+            color: black;
+            padding: 25px 20px;
+            text-decoration: none;
+            display: block;
+            width: 130px;
+            text-align: left;
+        }
+
+        .mainmenu-content a:hover {
+            color: rgb(156, 155, 155);
+        }
+
+
+        .mainmenu:hover .mainmenu-content {
+            display: block;
+        }
+
+        #textup1 {
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            width: 30px;
+        }
+
+        #textup2 {
+            top: 10px;
+            left: 740px;
+            width: 350px;
+        }
+
+        a {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+
+
+
+        .subtext {
+            position: relative;
+        }
+
+        .text1 {
+            position: absolute;
+            top: 75px;
+            left: 800px;
+            z-index: 1;
+            color: black;
+            background: white;
+            font-size: 18px;
+            width: 200px;
+            font-weight: bold;
+            transform: rotate(10deg);
+            box-shadow: 5px 5px darkslategray;
+        }
+
+        #text2 {
+            color: gray;
+            font-size: 15px;
+            text-align: left;
+            margin-left: 400px;
+        }
+
+
+        .table1 {
+            width: 30em;
+            height: 23em;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 30px;
+            border-collapse: collapse;
+            border-color: lightblue;
+            border-width: 5px;
+            font-weight: bold;
+
+        }
+
+        .table1 td {
+            border-color: lightblue;
+            border-width: 5px;
+        }
+
+        #maintext {
+            font-size: 35px;
+
+        }
+
+        #img1 {
+            width: 400px;
+            height: 270px;
+        }
+
+        #img2 {
+            width: 400px;
+            height: 500px;
+        }
+
+        #img3 {
+            width: 400px;
+            height: 500px;
+        }
+
+        .table2 {
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 25px;
+            font-weight: bold;
+
+        }
+
+        .table2 td {
+            border-color: lightblue;
+            border-width: 5px;
+            padding: 20px;
+        }
+
+        #month {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #list {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+    <script>
+        //이미지 로딩해둘 이미지 이름 배열
+        var files = ["image/1.jpg", "image/2.jpg", "image/3.jpg", "image/4.jpg",
+            "image/5.jpg", "image/6.jpg", "image/7.jpg", "image/8.jpg", "image/9.jpg",
+            "image/10.jpg", "image/11.jpg", "image/12.jpg", "image/13.jpg"];
+        var imgs = new Array();
+        for (var i = 0; i < files.length; i++) {
+            imgs[i] = new Image();
+            imgs[i].src = files[i];
+        }
+        //다음 이미지 출력
+        var next = 1;
+        function change(img) {
+            img.src = imgs[next].src;
+            next++;
+            next %= imgs.length;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="mainmenu">
+        <a href="#"><img src="image/menu.png" id="textup1"></a>
+        <div class="mainmenu-content">
+            <a href="#">ㅤ</a>
+            <a href="home.html">홈</a>
+            <a href="see.html">글 보기</a>
+            <a href="codingstory.html">코딩이야기</a>
+            <a href="calendar.html">캘린더</a>
+            <a href="visitlist.html">방명록</a>
+        </div>
+    </div>
+
+    <img src="image/logo_calendar.png" id="textup2">
+    <br><br>
+
+
+    <button type="button" id="list" onclick="location.href='calendar.html'">캘린더 보기</button>
+
+
+    <div id="#m1" style="font-size: 30px; font-weight: bold;">3월</div><br><br>
+
+    <img src="image/calendar/3_1.jpg" id="img2">
+    <br>
+    <p>#3/22(화) #소융대 #자대 #사과대 #개강사업
+        <br>#어, 흥이나는 개강이오~~
+    </p>
+    <br><br><br>
+
+
+    <img src="image/calendar/3_2.jpg" id="img1">
+    <br>
+    <p>#3/23(수) #20학번 #동기 #공학관 #공대
+        <br>#공부하는척 #사진찍기
+    </p>
+    <br><br>
+
+
+    <img src="image/calendar/3_3.jpg" id="img1">
+    <br>
+    <p>#3/25(금) #바쁜하루 #건강검진 #23살 #00년생
+        <br>#한국건강관리협회 #아프지말자
+    </p>
+    <br><br>
+
+
+    <img src="image/calendar/3_4.jpg" id="img1">
+    <br>
+    <p>#3/31(목) #CLC #친구들이랑 #공연보러가기
+    </p>
+    <br><br>
+
+</body>
+
+</html>

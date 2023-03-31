@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .mainmenu {
+            position: relative;
+            display: block;
+            list-style: none;
+            float: left;
+
+        }
+
+        .mainmenu-content {
+            display: none;
+            position: absolute;
+            background: white;
+            z-index: 1;
+        }
+
+        .mainmenu-content a {
+            color: black;
+            padding: 25px 20px;
+            text-decoration: none;
+            display: block;
+            width: 130px;
+            text-align: left;
+        }
+
+        .mainmenu-content a:hover {
+            color: rgb(156, 155, 155);
+        }
+
+
+        .mainmenu:hover .mainmenu-content {
+            display: block;
+        }
+
+        #textup1 {
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            width: 30px;
+        }
+
+        #textup2 {
+            top: 10px;
+            left: 740px;
+            width: 350px;
+        }
+
+        a {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        pre {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        #img1 {
+            width: 400px;
+            height: 400px;
+        }
+
+        #img2 {
+            width: 400px;
+            height: 300px;
+        }
+
+        #list {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 50px;
+            height: 30px;
+        }
+    </style>
+    <script>
+        //이미지 로딩해둘 이미지 이름 배열
+        var files = ["image/1.jpg", "image/2.jpg", "image/3.jpg", "image/4.jpg",
+            "image/5.jpg", "image/6.jpg", "image/7.jpg", "image/8.jpg", "image/9.jpg",
+            "image/10.jpg", "image/11.jpg", "image/12.jpg", "image/13.jpg"];
+        var imgs = new Array();
+        for (var i = 0; i < files.length; i++) {
+            imgs[i] = new Image();
+            imgs[i].src = files[i];
+        }
+        //다음 이미지 출력
+        var next = 1;
+        function change(img) {
+            img.src = imgs[next].src;
+            next++;
+            next %= imgs.length;
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="mainmenu">
+        <a href="#"><img src="image/menu.png" id="textup1"></a>
+        <div class="mainmenu-content">
+            <a href="#">ㅤ</a>
+            <a href="home.html">홈</a>
+            <a href="see.html">글 보기</a>
+            <a href="codingstory.html">코딩이야기</a>
+            <a href="calendar.html">캘린더</a>
+            <a href="visitlist.html">방명록</a>
+        </div>
+    </div>
+
+
+
+
+    <img src="image/logo_see.png" id="textup2">
+
+    <button type="button" id="list" onclick="location.href='see.html'">목록</button>
+    <p>제주도 trip 셋째날<br></p>
+    <img src="image/14.png">
+    <pre>
+
+
+오늘 드디어 카트타러 가는날!
+
+제주도 와서 9.81파크는 무조건 가야한다고 했는데!!
+        
+제발 날씨가 좋길 엄청 빌었다ㅠㅠ
+        
+다행히 날씨 너무 좋았고!!
+        
+카트 타러 가기 전에 뷰 맛집인 고기국수 가게 갔는데
+
+그냥 진짜 찐 맛집이었어..♥
+
+
+
+</pre>
+    <img src="image/16.jpg" id="img1"><br><br>
+    <pre>
+
+
+        점심 다 먹고 택시타고 9.81파크로 바로 달려감!
+
+날씨 너무 추워서 걱정 진짜 많이 했다ㅠㅠ
+
+
+</pre>
+    <img src="image/19.jpg" id="img1"><br><br>
+    <pre>
+
+
+생각보다 너무 빨라서 겁먹었는데 그래도 너무 재밌었다
+
+9.81파크에서 다 놀고 해 지기 전에 새별오름 올라가는데
+
+
+</pre>
+    <img src="image/18.jpg" id="img2"><br><br>
+    <pre>
+
+
+진짜 죽을만큼 힘들었지만 뒤에 보는 순간 
+
+"이래서 올라가는구나" 했어 ㅋㅋㅋ
+    
+숙소 근처에 있는 갈치조림 식당을 갔는데
+
+
+</pre>
+    <img src="image/17.jpg" id="img2"><br><br>
+    <pre>
+
+
+정말 기대 하나도 안해하고 갔는데
+
+반찬들도 너무 다 맛있고 갈치조림 진짜 너무 맛있고
+
+하나부터 열까지 너무 만족스러웠던 "또똣부뚜막"!!
+
+다음에 제주도 가게 되면 또 갈 예정 ㅎㅎ
+    </pre>
+
+
+</body>
+
+</html>

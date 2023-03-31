@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .mainmenu {
+            position: relative;
+            display: block;
+            list-style: none;
+            float: left;
+
+        }
+
+        .mainmenu-content {
+            display: none;
+            position: absolute;
+            background: white;
+            z-index: 1;
+        }
+
+        .mainmenu-content a {
+            color: black;
+            padding: 25px 20px;
+            text-decoration: none;
+            display: block;
+            width: 130px;
+            text-align: left;
+        }
+
+        .mainmenu-content a:hover {
+            color: rgb(156, 155, 155);
+        }
+
+
+        .mainmenu:hover .mainmenu-content {
+            display: block;
+        }
+
+        #textup1 {
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            width: 30px;
+        }
+
+        #textup2 {
+            top: 10px;
+            left: 740px;
+            width: 350px;
+        }
+
+        a {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        pre {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        #img1 {
+            width: 700px;
+            height: 500px;
+        }
+
+
+        #list {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 50px;
+            height: 30px;
+        }
+    </style>
+    <script>
+        //이미지 로딩해둘 이미지 이름 배열
+        var files = ["image/1.jpg", "image/2.jpg", "image/3.jpg", "image/4.jpg",
+            "image/5.jpg", "image/6.jpg", "image/7.jpg", "image/8.jpg", "image/9.jpg",
+            "image/10.jpg", "image/11.jpg", "image/12.jpg", "image/13.jpg"];
+        var imgs = new Array();
+        for (var i = 0; i < files.length; i++) {
+            imgs[i] = new Image();
+            imgs[i].src = files[i];
+        }
+        //다음 이미지 출력
+        var next = 1;
+        function change(img) {
+            img.src = imgs[next].src;
+            next++;
+            next %= imgs.length;
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="mainmenu">
+        <a href="#"><img src="image/menu.png" id="textup1"></a>
+        <div class="mainmenu-content">
+            <a href="#">ㅤ</a>
+            <a href="home.html">홈</a>
+            <a href="see.html">글 보기</a>
+            <a href="codingstory.html">코딩이야기</a>
+            <a href="calendar.html">캘린더</a>
+            <a href="visitlist.html">방명록</a>
+        </div>
+    </div>
+
+    <img src="image/logo_codingstory.png" id="textup2">
+
+    <button type="button" id="list" onclick="location.href='codingstory.html'">목록</button>
+    <p>이벤트 리스너 활용하기<br></p>
+    <img src="image/20.png">
+    <pre>이벤트 리스너 활용에 대해서 배우기 시작했다.
+
+몇 주 전부터 배우기 시작한 이벤트 리스너!
+
+처음 보는 개념이라 처음에는 이해가 안되었고 너무 어려웠다ㅠㅠ
+        
+교수님의 영상을 반복해서 보면서 이해하려고 노력했고
+        
+몇 번 보다보니 조금씩 이해가 가기 시작했다!
+       
+
+
+
+이벤트 리스너란?
+
+- 발생한 이벤트에 대처하기 위해 작성된 자바스크립트 코드이다.
+
+
+이벤트 객체란?
+
+- 발생한 이벤트에 관련된 다양한 정보를 담은 객체이다.
+
+onclick과 같은 이벤트 리스너에 대한 자세한 설명은 
+
+다음 장에 할 것이다!!!!
+
+    </pre>
+
+    <img src="image/22.PNG" id="img1"><br><br>
+    <br><br><br>
+    <p>난이도 : <meter value="0.8" max="1.0">80%</meter></p>
+</body>
+
+</html>

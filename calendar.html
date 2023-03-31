@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .mainmenu {
+            position: relative;
+            display: block;
+            list-style: none;
+            float: left;
+
+        }
+
+        .mainmenu-content {
+            display: none;
+            position: absolute;
+            background: white;
+            z-index: 1;
+        }
+
+        .mainmenu-content a {
+            color: black;
+            padding: 25px 20px;
+            text-decoration: none;
+            display: block;
+            width: 130px;
+            text-align: left;
+        }
+
+        .mainmenu-content a:hover {
+            color: rgb(156, 155, 155);
+        }
+
+
+        .mainmenu:hover .mainmenu-content {
+            display: block;
+        }
+
+        #textup1 {
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            width: 30px;
+        }
+
+        #textup2 {
+            top: 10px;
+            left: 740px;
+            width: 350px;
+        }
+
+        a {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+
+        #list {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 70px;
+            height: 35px;
+        }
+
+
+        .subtext {
+            position: relative;
+        }
+
+        .text1 {
+            position: absolute;
+            top: 75px;
+            left: 800px;
+            z-index: 1;
+            color: black;
+            background: white;
+            font-size: 18px;
+            width: 200px;
+            font-weight: bold;
+            transform: rotate(10deg);
+            box-shadow: 5px 5px darkslategray;
+        }
+
+        #text2 {
+            color: gray;
+            font-size: 15px;
+            text-align: left;
+            margin-left: 400px;
+        }
+
+
+        .table1 {
+            width: 30em;
+            height: 23em;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 30px;
+            border-collapse: collapse;
+            border-color: black;
+            border-width: 5px;
+            font-weight: bold;
+            background-image: url('image/calendar/back2.jpg');
+
+        }
+
+        .table1 td {
+            border-color: black;
+            border-width: 5px;
+        }
+
+        #maintext {
+            font-size: 35px;
+            background-image: url('image/calendar/back2.jpg');
+
+        }
+
+        #img1 {
+            width: 400px;
+            height: 300px;
+        }
+
+        #img2 {
+            width: 300px;
+            height: 400px;
+        }
+
+        #month {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #circle1 {
+            position: absolute;
+            z-index: 1;
+            background-color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 35px;
+            top: 140px;
+            left: 600px;
+        }
+
+        #ring1 {
+            position: absolute;
+            z-index: 1;
+            top: 60px;
+            left: 615px;
+        }
+
+        #circle2 {
+            position: absolute;
+            z-index: 1;
+            background-color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 35px;
+            top: 140px;
+            left: 1020px;
+        }
+
+        #ring2 {
+            position: absolute;
+            z-index: 1;
+            top: 60px;
+            left: 1035px;
+        }
+    </style>
+    <script>
+        //이미지 로딩해둘 이미지 이름 배열
+        var files = ["image/1.jpg", "image/2.jpg", "image/3.jpg", "image/4.jpg",
+            "image/5.jpg", "image/6.jpg", "image/7.jpg", "image/8.jpg", "image/9.jpg",
+            "image/10.jpg", "image/11.jpg", "image/12.jpg", "image/13.jpg"];
+        var imgs = new Array();
+        for (var i = 0; i < files.length; i++) {
+            imgs[i] = new Image();
+            imgs[i].src = files[i];
+        }
+        //다음 이미지 출력
+        var next = 1;
+        function change(img) {
+            img.src = imgs[next].src;
+            next++;
+            next %= imgs.length;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="mainmenu">
+        <a href="#"><img src="image/menu.png" id="textup1"></a>
+        <div class="mainmenu-content">
+            <a href="#">ㅤ</a>
+            <a href="home.html">홈</a>
+            <a href="see.html">글 보기</a>
+            <a href="codingstory.html">코딩이야기</a>
+            <a href="calendar.html">캘린더</a>
+            <a href="visitlist.html">방명록</a>
+        </div>
+    </div>
+
+    <img src="image/logo_calendar.png" id="textup2">
+    <br><br>
+    <button type="button" id="list" onclick="location.href='calendarwrite.html'">글쓰기</button>
+
+    <div id="circle1"></div>
+    <div id="ring1"><img src="image/calendar/ring1.png"></div>
+    <div id="circle2"></div>
+    <div id="ring2"><img src="image/calendar/ring1.png"></div>
+
+    <table border="1" class="table1">
+        <tr>
+            <td colspan="4" id="maintext">
+                2022 calendar
+            </td>
+        </tr>
+        <tr>
+            <td><a href="calendar1.html" title="1월로 이동합니다.">01</a></td>
+            <td><a href="calendar2.html" title="2월로 이동합니다.">02</a></td>
+            <td><a href="calendar3.html" title="3월로 이동합니다.">03</a></td>
+            <td><a href="calendar4.html" title="4월로 이동합니다.">04</a></td>
+        </tr>
+        <tr>
+            <td><a href="calendar5.html" title="5월로 이동합니다.">05</a></td>
+            <td><a href="calendar6.html" title="6월로 이동합니다.">06</a></td>
+            <td><a href="#">07</a></td>
+            <td><a href="#">08</a></td>
+        </tr>
+        <tr>
+            <td><a href="#">09</a></td>
+            <td><a href="#">10</a></td>
+            <td><a href="#">11</a></td>
+            <td><a href="#">12</a></td>
+        </tr>
+    </table><br>
+    <p id="text2">
+        *숫자를 클릭하면 해당 월 페이지로 이동합니다.
+    </p>
+
+
+</body>
+
+</html>

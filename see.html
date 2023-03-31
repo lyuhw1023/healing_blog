@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .mainmenu {
+            position: relative;
+            display: block;
+            list-style: none;
+            float: left;
+
+        }
+
+        .mainmenu-content {
+            display: none;
+            position: absolute;
+            background: white;
+            z-index: 1;
+        }
+
+        .mainmenu-content a {
+            color: black;
+            padding: 25px 20px;
+            text-decoration: none;
+            display: block;
+            width: 130px;
+            text-align: left;
+        }
+
+        .mainmenu-content a:hover {
+            color: rgb(156, 155, 155);
+        }
+
+
+        .mainmenu:hover .mainmenu-content {
+            display: block;
+        }
+
+        #textup1 {
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            width: 30px;
+        }
+
+        #textup2 {
+            top: 10px;
+            left: 740px;
+            width: 350px;
+        }
+
+        a {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+
+        #name:hover {
+            text-shadow: 5px 5px 5px darkslategray;
+        }
+
+        #list {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 70px;
+            height: 35px;
+        }
+
+        .subtext {
+            position: relative;
+        }
+
+        .text1 {
+            position: absolute;
+            top: 75px;
+            left: 800px;
+            z-index: 1;
+            color: black;
+            background: white;
+            font-size: 18px;
+            width: 200px;
+            font-weight: bold;
+            transform: rotate(10deg);
+            box-shadow: 5px 5px darkslategray;
+        }
+
+        .text2 {
+            position: absolute;
+            top: 35px;
+            left: 660px;
+            z-index: 1;
+            color: white;
+            font-size: 30px;
+            width: 120px;
+            font-weight: bold;
+            text-shadow: 5px 3px black;
+            font-style: italic;
+        }
+
+        .text3 {
+            position: absolute;
+            top: 10px;
+            left: 730px;
+            z-index: 1;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 5px 3px black;
+            font-style: italic;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        #image1 {
+            width: 500px;
+            height: 400px;
+        }
+    </style>
+    <script>
+        //이미지 로딩해둘 이미지 이름 배열
+        var files = ["image/1.jpg", "image/2.jpg", "image/3.jpg", "image/4.jpg",
+            "image/5.jpg", "image/6.jpg", "image/7.jpg", "image/8.jpg", "image/9.jpg",
+            "image/10.jpg", "image/11.jpg", "image/12.jpg", "image/13.jpg"];
+        var imgs = new Array();
+        for (var i = 0; i < files.length; i++) {
+            imgs[i] = new Image();
+            imgs[i].src = files[i];
+        }
+        //다음 이미지 출력
+        var next = 1;
+        function change(img) {
+            img.src = imgs[next].src;
+            next++;
+            next %= imgs.length;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="mainmenu">
+        <a href="#"><img src="image/menu.png" id="textup1"></a>
+        <div class="mainmenu-content">
+            <a href="#">ㅤ</a>
+            <a href="home.html">홈</a>
+            <a href="see.html">글 보기</a>
+            <a href="codingstory.html">코딩이야기</a>
+            <a href="calendar.html">캘린더</a>
+            <a href="visitlist.html">방명록</a>
+        </div>
+    </div>
+
+    <img src="image/logo_see.png" id="textup2">
+
+    <button type="button" id="list" onclick="location.href='seewrite.html'">글쓰기</button>
+
+    <a href="see1.html" id="name" title="제목을 클릭하면 본문을 볼 수 있습니다."><br><br><br>제주도 trip 셋째날<br><br></a>
+    <div class="subtext"><img src="image/14.png"><span class="text1">제주도 BLOG!!</span></div>
+    <br><br>
+    <hr>
+
+    <a href="see2.html" id="name" title="제목을 클릭하면 본문을 볼 수 있습니다."><br>동기사랑 나라사랑 - 동기들과 1박 2일 여행<br><br></a>
+    <div class="subtext"><img src="image/15.png"><span class="text2">물놀이<br>&<br>바베큐</span></div>
+    <br><br>
+    <hr>
+
+    <a href="see3.html" id="name" title="제목을 클릭하면 본문을 볼 수 있습니다."><br>!!WOW Festival!!<br><br></a>
+    <div class="subtext"><img src="image/40.jpg" id="image1"><span class="text3">War Of Water<br>Festival</span></div>
+
+
+</body>
+
+</html>

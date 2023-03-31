@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .mainmenu {
+            position: relative;
+            display: block;
+            list-style: none;
+            float: left;
+
+        }
+
+        .mainmenu-content {
+            display: none;
+            position: absolute;
+            background: white;
+            z-index: 1;
+        }
+
+        .mainmenu-content a {
+            color: black;
+            padding: 25px 20px;
+            text-decoration: none;
+            display: block;
+            width: 130px;
+            text-align: left;
+        }
+
+        .mainmenu-content a:hover {
+            color: rgb(156, 155, 155);
+        }
+
+
+        .mainmenu:hover .mainmenu-content {
+            display: block;
+        }
+
+        #textup1 {
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            width: 30px;
+        }
+
+        #textup2 {
+            top: 10px;
+            left: 740px;
+            width: 350px;
+        }
+
+        a {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        pre {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        #img1 {
+            width: 400px;
+            height: 400px;
+        }
+
+        #img2 {
+            width: 400px;
+            height: 280px;
+        }
+
+        #img3 {
+            width: 400px;
+            height: 480px;
+        }
+
+        #list {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 50px;
+            height: 30px;
+        }
+    </style>
+    <script>
+        //이미지 로딩해둘 이미지 이름 배열
+        var files = ["image/1.jpg", "image/2.jpg", "image/3.jpg", "image/4.jpg",
+            "image/5.jpg", "image/6.jpg", "image/7.jpg", "image/8.jpg", "image/9.jpg",
+            "image/10.jpg", "image/11.jpg", "image/12.jpg", "image/13.jpg"];
+        var imgs = new Array();
+        for (var i = 0; i < files.length; i++) {
+            imgs[i] = new Image();
+            imgs[i].src = files[i];
+        }
+        //다음 이미지 출력
+        var next = 1;
+        function change(img) {
+            img.src = imgs[next].src;
+            next++;
+            next %= imgs.length;
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div class="mainmenu">
+        <a href="#"><img src="image/menu.png" id="textup1"></a>
+        <div class="mainmenu-content">
+            <a href="#">ㅤ</a>
+            <a href="home.html">홈</a>
+            <a href="see.html">글 보기</a>
+            <a href="codingstory.html">코딩이야기</a>
+            <a href="calendar.html">캘린더</a>
+            <a href="visitlist.html">방명록</a>
+        </div>
+    </div>
+
+
+
+
+    <img src="image/logo_see.png" id="textup2">
+
+    <button type="button" id="list" onclick="location.href='see.html'">목록</button>
+
+    <p>!!WOW Festival!!<br></p>
+    <pre>
+
+몇 달 전부터 상상유니브 측 관계자분이랑
+
+회의하고, 에이블 사람들끼리도 회의하고
+
+기획하고 준비하고... 준비하는 기간동안 너무 설렜다!!!!!!!!
+
+축제 당일 전날 밤에 모여서 풀장과 워터슬라이드에 공기 넣어놓고
+
+부스 설치도 하고 물도 채웠다.
+ 
+
+</pre>
+    <img src="image/36.jpg" id="img3"><br><br>
+    <pre>
+
+
+시간이 오래 걸릴거란 것은 알고 있었지만
+
+이렇게까지 오래 걸릴줄은...ㅠㅠ 
+
+축제 당일 아침 6시 반부터 모여서 준비하기로 해서
+
+엄청 걱정됐다.
+
+
+</pre>
+    <img src="image/calendar/6_3.jpg" id="img2"><br><br>
+    <pre>
+
+
+축제 당일 아침에 모여서 모든 준비를 끝냈다!!
+
+축제 시작 전에 학생회 사람들이랑 사진도 찍었당 
+ 
+
+
+</pre>
+    <img src="image/37.jpg" id="img1"><br><br>
+    <img src="image/38.jpg" id="img2"><br><br>
+    <pre>
+
+
+
+나는 게임 부스 담당이었고
+
+옆에 있던 BAR 부스에서 무알콜 맥주를 나눠줘서
+
+행사 진행하면서 맛있게 먹었당
+
+
+</pre>
+    <img src="image/39.jpg" id="img3"><br><br>
+    <pre>
+
+
+게임 부스에서 게임 진행하다가
+
+친구들이 놀러와서 잠깐 같이 놀았당
+
+나가서 사진 찍자니까 바로 물총 쏴버리는....ㅎ
+
+
+</pre>
+    <img src="image/40.jpg" id="img2"><br><br>
+    <pre>
+
+
+축제는 다행이 사람도 많이 오고 아주 성공적이었다
+
+
+    </pre>
+    <img src="image/41.jpg" id="img2"><br><br>
+    <pre>
+
+
+축제가 끝나고 모든 부스와 풀장 
+        
+그리고 워터슬라이드까지
+
+다 정리를 하고 에이블끼리 사진도 찍었다.
+
+다들 너무 고생했고 너무 재밌었어요!!!
+ 
+
+</pre>
+    <img src="image/42.jpg" id="img2"><br><br>
+
+</body>
+
+</html>
