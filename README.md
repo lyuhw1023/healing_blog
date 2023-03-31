@@ -31,8 +31,8 @@ HTML, CSS, JavaScript를 이용해 개발한 웹 블로그 입니다.
 
 ## 글보기 화면 & 코딩이야기 화면
 <div>
-<img src="https://user-images.githubusercontent.com/52669844/207297262-04362ec2-da2d-411c-9710-2a7a93c8109c.JPG" width="700px"/>
 <img src="https://user-images.githubusercontent.com/52669844/207297310-a4c6bc71-ae40-4151-aa2e-bcffe07c412a.JPG" width="700px"/>
+
 </div>
 <br/>
 
@@ -44,6 +44,7 @@ HTML, CSS, JavaScript를 이용해 개발한 웹 블로그 입니다.
 ## 캘린더 화면
 <div>
 <img src="https://user-images.githubusercontent.com/52669844/207297339-3e5016ee-59c5-4b41-a4c2-5dd499fab5df.JPG" width="700px"/>
+
 </div>
 <br/>
 
@@ -54,7 +55,8 @@ HTML, CSS, JavaScript를 이용해 개발한 웹 블로그 입니다.
 
 ## 방명록 화면
 <div>
-<img src="https://user-images.githubusercontent.com/52669844/207297339-3e5016ee-59c5-4b41-a4c2-5dd499fab5df.JPG" width="700px"/>
+<img src="https://user-images.githubusercontent.com/52669844/229086060-569fe6ab-52fc-4a78-984c-04adb41557ac.png" width="700px"/>
+
 </div>
 <br/>
 
